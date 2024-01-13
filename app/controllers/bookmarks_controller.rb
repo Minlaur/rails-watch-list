@@ -5,8 +5,8 @@ before_action :set_list, only: %i[new create]
   end
 
   def create
-    @bookmark = Bookmark.new
-    @bookmark.save
+    @bookmark = Bookmark.new(bookmark_params)
+    if @bookmark.save
   end
 
   def destroy
