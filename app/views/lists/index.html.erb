@@ -1,11 +1,18 @@
-<div class = "container">
-<h1>Here are your watchlists! 🍿</h1>
+<div class="banner">
+  <div class="container">
+    <h1><span class = "yellow-highlight">🥸 WATCHAPPDOC is the only movie watchlist you need. </span> </h1>
+    <p>A movie a day, who needs apples anyway? </p>
+  </div>
+</div>
+
+<div class="container">
   <ul>
     <% @lists.each do |list| %>
-      <li><%= link_to list.name, list_path(list) %>
-      <%= cl_image_tag list.photo.key, width: 400, height: 300, crop: :fill %>
-      </li>
+      <%= link_to list.name, list_path(list), class: "btn btn-primary" %>
+      <%# <%= cl_image_tag list.photo.key, width: 400, height: 300, crop: :fill %>
     <% end %>
   </ul>
-<%= link_to "Add new list!", new_list_path %>
+</div>
+<div class="vertical-center">
+  <%= link_to "Add new list", new_list_path, class: "btn btn-ghost" %>
 </div>
