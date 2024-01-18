@@ -1,3 +1,17 @@
 .container {
   padding: 16px;
 }
+
+.container-item {
+  padding: 16px;
+  justify-content: space-evenly;
+  display: flex;
+  margin: 1em;
+}
+
+@media screen and (max-width: 600px) {
+  .container-item {
+    flex-direction: column; /* Change to column layout on small screens */
+    align-items: center; /* Center items in the column */
+  }
+}
